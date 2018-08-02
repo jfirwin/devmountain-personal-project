@@ -11,12 +11,12 @@ import EditProfile from '../Components/Edit/Profile/EditProfile'
 
 export default(
 	<Switch>
-		<Route path='/' exact component={Home} />
-    <Route path='/search' exact component={Search} />
+		<Route path='/' exact component={Search} />
+		<Route path='/home' exact component={Home} />
     <Route path='/about' component={About} exact/>
 		<Route path='/profile/edit' component={EditProfile} exact/>
 		<Route path='/listing/edit' component={EditListing} exact/>
-		<Route path='/:username' component={Profile} />
 		<Route path='/activity/:listingID' component={Listing} />
+		<Route path='/:username' component={Profile} />
 	</Switch>
 )

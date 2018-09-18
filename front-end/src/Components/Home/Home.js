@@ -1,15 +1,51 @@
 import React, { Component } from 'react';
 import Navbar from '../Navigation/Navbar/Navbar'
-import Footer from '../Navigation/Footer/Footer'
+import HomeTile from './HomeTile'
+import './backgroundAnimation.css'
+// backgroundImage: 'url("./imgs/spotter.JPG")',backgroundRepeat:'no-repeat', backgroundSize:'cover'
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <Navbar/>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <Footer/>
+      <div style={{height:'100vh'}}>
+      <Navbar/>
+      <ul className="cb-slideshow">
+      	<li>
+      		<span>Image 01</span>
+      		<div/>
+      	</li>
+        <li>
+      		<span>Image 02</span>
+      		<div/>
+      	</li>
+      	<li>
+      		<span>Image 03</span>
+      		<div/>
+      	</li>
+        <li>
+      		<span>Image 04</span>
+      		<div/>
+      	</li>
+      	<li>
+      		<span>Image 05</span>
+      		<div/>
+      	</li>
+        <li>
+      		<span>Image 06</span>
+      		<div/>
+      	</li>
+      	<li>
+      		<span>Image 07</span>
+      		<div/>
+      	</li>
+        <li>
+      		<span>Image 08</span>
+      		<div/>
+      	</li>
+      </ul>
+        <HomeTile/>
       </div>
+
     );
   }
 }

@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import Navbar from '../Navigation/Navbar/Navbar'
-import MapContainer from '../Map/MapContainer'
+import SearchMap from '../Map/SearchMap'
 import MapOverlay from '../Map/MapOverlay'
-import SearchPane from './SearchPane.js'
+import ActivityPane from './ActivityPane'
+import Parameters from './Elements/Parameters'
 
 class Search extends Component {
   render() {
     return (
-      <div>
-        <Navbar/>
-        <div style={{display: "flex"}}>
+      <div style={{height:'100vh', display: 'flex', flexDirection: 'column'}}>
+        <Navbar displaySearch="true"/>
+        <Parameters/>
+        <div style={{display: "flex",height:'100%'}}>
+          <ActivityPane/>
           <div>
-            <MapOverlay/>
-            <MapContainer/>
+            <div style={{height:'100%',padding:'20px 20px 20px 0px'}}>
+              <MapOverlay/>
+              <SearchMap/>
+            </div>
           </div>
-          <SearchPane/>
         </div>
       </div>
     );

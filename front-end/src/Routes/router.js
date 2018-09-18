@@ -4,18 +4,17 @@ import Home from '../Components/Home/Home'
 import Search from '../Components/Search/Search'
 import Profile from '../Components/Profile/Profile'
 import Listing from '../Components/Listing/Listing'
-import About from '../Components/About/About'
-import EditListing from '../Components/Edit/Listing/EditListing'
-import EditProfile from '../Components/Edit/Profile/EditProfile'
-// import Login from './Components/Login'
+import Callback from '../Components/Edit/Callback'
+import Edit from '../Components/Edit/Edit'
+import Protected from './protected'
+
 
 export default(
 	<Switch>
-		<Route path='/' exact component={Search} />
-		<Route path='/home' exact component={Home} />
-    <Route path='/about' component={About} exact/>
-		<Route path='/profile/edit' component={EditProfile} exact/>
-		<Route path='/listing/edit' component={EditListing} exact/>
+		<Route path='/' exact component={Home} />
+		<Route path='/search' exact component={Search} />
+		<Route path='/callback' exact component={Callback} />
+		<Protected path='/edit' component={Edit} exact/>
 		<Route path='/activity/:listingID' component={Listing} />
 		<Route path='/:username' component={Profile} />
 	</Switch>
